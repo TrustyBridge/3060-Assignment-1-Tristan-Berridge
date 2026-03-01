@@ -1,0 +1,65 @@
+
+
+body {
+  display:grid;
+  grid-template-areas: 
+  "header header"
+  "nav  nav"
+  "main main"
+
+
+}
+
+nav {
+  min-height: 8em;
+  grid-area:nav;
+  background-color: #81b29a;
+
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  list-style: none;
+  padding: 1;
+  height: 100%;
+}
+
+ul a{
+  color: var(--dark-one);
+  border: 0.2em solid var(--dark-one);
+  background-color: #f2cc8f;
+  border-radius: 50em;
+  display:block;
+  margin: 1em;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 1em 2em;
+}
+ul a:visited{
+  color: #e07a5f;
+}
+
+header {
+  min-height: 10em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  grid-area:header;
+  background-color: #3d405b;
+}
+
+header h2 {
+  color: #f2cc8f;
+  font-size: 1.5em;
+}
+
+
+
+main {
+  grid-area:main;
+  background-color: #e07a5f;
+  min-height: 40em;
+}
+
