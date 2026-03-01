@@ -10,7 +10,7 @@ function load(file) {
 
 const pages = ['index.html','analysis_methods.html','collection_methods.html','data_sources.html','publication_venues.html'];
 
-test.each(pages)('%s has links to all other pages', (currentpage) => {
+test.each(pages)('%s has links to all other pages', (currentPage) => {
   load(currentPage);
   const otherPages = pages.filter(p => p!== currentPage);
   otherPages.forEach(targetPage => {
