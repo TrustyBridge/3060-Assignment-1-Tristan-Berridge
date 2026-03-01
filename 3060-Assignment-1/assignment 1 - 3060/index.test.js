@@ -31,5 +31,10 @@ test.each(pages)('%s has no empty links', (currentPage) => {
     expect(link.getAttribute('href')).not.toBeNull();
   });
 });
+test('data_sources has a table', () => {
+  load('data_sources.html');
+  const table = document.querySelector('table');
+  expect(table).not.toBeNull();
+});
 
 
