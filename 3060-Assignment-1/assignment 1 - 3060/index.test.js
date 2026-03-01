@@ -18,3 +18,18 @@ test.each(pages)('%s has links to all other pages', (currentPage) => {
     expect(link).not.toBeNull();
   });
 });
+test.each(pages)('%s has at least one heading', (currentPage) => {
+  load(currentPage);
+  const heading = document.querySelector('h1, h2, h3');
+  expect(heading).not.toBeNull();
+});
+test.each(pages)('%s has no empty links', (currentPage) => {
+  load(currentPage);
+  const links = Array.from(document.querySelectorAll('a'));
+  links.forEach(link => {
+    expect(link.getAttribute('href')).not.toBe('');
+    expect(link.getAttribute('href')).not.toBeNull();
+  });
+});
+
+
